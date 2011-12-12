@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.0.1 (2011/12/12)
+--------------------
+
+- Fix bug for Site Root and other objects that do not have getTranslation method [erral]
+
+
 1.0 (2011/12/12)
 -------------------
 
