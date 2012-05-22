@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1 (2012/05/22)
+------------------
+
+- Show the viewlet just for ITranslatable objects and remove the nasty bare except
+  [erral]
+
 1.0.1 (2011/12/12)
 --------------------
 

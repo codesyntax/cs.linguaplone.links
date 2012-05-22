@@ -12,17 +12,6 @@ class MultilingualContentViewlet(ViewletBase):
         current = context.Language()
         _checkPermission = getSecurityManager().checkPermission
         self.translations = []
-        try:
-            for lang, content in context.getTranslations(review_state=False).items():
-                if lang != current and _checkPermission('View', content):
-                    self.translations.append(content)
-        except AttributeError:
-            # Handle the situation for site-root templates.
-            # Plone site root has not translations
-            pass
-
-            
-    
-
-
-        
+        for lang, content in context.getTranslations(review_state=False).items():
+            if lang != current and _checkPermission('View', content):
+                self.translations.append(content)
